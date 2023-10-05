@@ -1,0 +1,43 @@
+---
+title: "How to use Swedish Election Data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to use Swedish Election Data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(API)
+library(readxl)
+library(shiny)
+library(ggplot2)
+```
+
+Create an object from using the "election" class.
+
+The data that is extracted will be stored in a field called "election_data". 
+
+```{r}
+Sweden_election<-election()
+
+Sweden_election$election_data
+```
+
+Now clean the data so that it can be in the right format.
+
+```{r}
+Sweden_election$clean()
+
+Sweden_election$election_data
+```
+
+
+## post this, the shiny app can be called. 
