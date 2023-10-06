@@ -21,7 +21,7 @@ election<- setRefClass(Class="election",
                            download.file(url, "election_data.xlsx")
                            election_data <<- readxl::read_excel("election_data.xlsx")  
                          },
-                         clean = function(){
+                         clean = function(){       #This method will have to be run before calling the shiny app. 
                            election_data<<- election_data[1:7]
                            a<-c("Parti","Roster_2022", "Andel_2022", "Diff_4", "Diff_andel", "Roster_2018", "Andel_2018")
                            names(election_data) <<- a
