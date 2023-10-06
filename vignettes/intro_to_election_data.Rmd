@@ -31,7 +31,7 @@ Sweden_election<-election()
 Sweden_election$election_data
 ```
 
-Now clean the data so that it can be in the right format.
+Now clean the data so that it can be in the right format. This needs to be done before calling the shiny app. 
 
 ```{r}
 Sweden_election$clean()
@@ -39,5 +39,10 @@ Sweden_election$clean()
 Sweden_election$election_data
 ```
 
+To view all the parties invloved.
+
+```{r}
+Sweden_election$party()
+```
 
 ## post this, the shiny app can be called. 

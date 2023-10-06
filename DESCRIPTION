@@ -9,10 +9,13 @@ Description: Extracts the Swedish Election data from the web for the years 2022 
 License: GPL-3
 RoxygenNote: 7.2.3
 Imports: 
+    dplyr,
     ggplot2,
     readxl,
     shiny
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
+Config/testthat/edition: 3

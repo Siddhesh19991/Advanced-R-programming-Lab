@@ -20,6 +20,8 @@ Sweden Election Data
 
 \section{Methods}{
  
-clean(): Cleans the dataframe such that it is structured in the right form.
+clean(): Cleans the dataframe such that it is structured in the right form. Should be called before calling the shiny app. \cr
+\cr
+part(): Shows all the parties invovled in the Swedish election. Optional to be called.
 }
 

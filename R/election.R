@@ -3,7 +3,9 @@
 #' @field election_data A dataframe that contains the extracted election data
 #' 
 #' @section Methods: 
-#' clean(): Cleans the dataframe such that it is structured in the right form. 
+#' clean(): Cleans the dataframe such that it is structured in the right form. Should be called before calling the shiny app. \cr
+#' \cr
+#' part(): Shows all the parties invovled in the Swedish election. Optional to be called. 
 #'
 #' @return Returns an object of class "election" 
 #' 
@@ -21,6 +23,11 @@ election<- setRefClass(Class="election",
                          },
                          clean = function(){
                            election_data<<- election_data[1:7]
-                           colnames(election_data)<<-c("Parti","Röster_2022","Andel_2022","Diff_4","Diff_andel","Röster_2018","Andel_2018")
+                           a<-c("Parti","Roster_2022", "Andel_2022", "Diff_4", "Diff_andel", "Roster_2018", "Andel_2018")
+                           names(election_data) <<- a
+                           },
+                         party = function(){
+                           colnames(election_data[1])<<-"Parti"
+                           election_data%>%dplyr::select(Parti)%>%dplyr::arrange(Parti) 
                          }
                        ))
