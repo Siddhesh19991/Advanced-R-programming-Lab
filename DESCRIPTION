@@ -3,8 +3,8 @@ Type: Package
 Title: Sweden Election Data 
 Version: 1.0
 Date: 2023-10-01
-Author: siddhesh sreedar <sidsr770@student.liu.se> and eva <eva@gmail.com>
-Maintainer: siddhesh sreedar <sidsr770@student.liu.se> and eva <eva@gmail.com>
+Author: siddhesh sreedar <sidsr770@student.liu.se>
+Maintainer: siddhesh sreedar <sidsr770@student.liu.se>
 Description: Extracts the Swedish Election data from the web for the years 2022 and 2018
 License: GPL-3
 RoxygenNote: 7.2.3
