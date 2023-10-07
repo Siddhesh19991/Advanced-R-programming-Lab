@@ -15,11 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-#devtools::install_github("Siddhesh19991/Lab_5")
 library(API)
-# library(readxl)
-# library(shiny)
-# library(ggplot2)
 ```
 
 Create an object from using the "election" class.
@@ -46,4 +42,4 @@ To view all the parties invloved.
 Sweden_election$party()
 ```
 
-## post this, the shiny app can be called. 
+The shiny app can be called by running: runGitHub("Siddhesh19991/shinyapp")
