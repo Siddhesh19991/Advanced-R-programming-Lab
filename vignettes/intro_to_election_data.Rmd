@@ -20,7 +20,7 @@ library(API)
 
 Create an object from using the "election" class.
 
-The data that is extracted will be stored in a field called "election_data". 
+The data that is extracted will be stored in a field called "election_data".
 
 ```{r}
 Sweden_election<-election()
@@ -28,7 +28,7 @@ Sweden_election<-election()
 Sweden_election$election_data
 ```
 
-Now clean the data so that it can be in the right format. This needs to be done before calling the shiny app. 
+Now clean the data so that it can be in the right format. This needs to be done before calling the shiny app.
 
 ```{r}
 Sweden_election$clean()
@@ -41,5 +41,3 @@ To view all the parties invloved.
 ```{r}
 Sweden_election$party()
 ```
-
-The shiny app can be called by running: runGitHub("Siddhesh19991/shinyapp")
