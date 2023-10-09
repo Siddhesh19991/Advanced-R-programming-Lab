@@ -17,9 +17,10 @@ election<- setRefClass(Class="election",
                        methods = list(
                          initialize = function(){
                            url<-"https://www.val.se/download/18.14c1f613181ed0043d570c5/1667207094207/slutligt-valresultat-riksdagen-jamforande-statistik-2018-2022.xlsx"
-                           url <- url
-                           download.file(url, "election_data.xlsx")
-                           election_data <<- openxlsx::read.xlsx("election_data.xlsx")  
+                           #url <- url
+                           #download.file(url, "election_data.xlsx")
+                           #election_data <<- openxlsx::read.xlsx("election_data.xlsx")  
+                           election_data <<- read.xlsx(url)
                          },
                          clean = function(){       #This method will have to be run before calling the shiny app. 
                            election_data<<- election_data[1:7]
